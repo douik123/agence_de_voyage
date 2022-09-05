@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useRef, useEffect } from 'react';
 import { AiOutlineSend } from "react-icons/ai";
 import { ImCross } from "react-icons/im";
 import {Link} from 'react-router-dom'
@@ -7,13 +8,18 @@ function Contact() {
   const [prenom,setPrenom]=useState("")
   const [adresse,setAdresse]=useState("")
   const [message,setMessage]=useState("")
+  const inputRef = useRef();
+ 
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
   return (
     <div className="PageContact">
       <div className='infos'>
       <label className="labels">Nom:</label>
-              <input type="text" name="T2" size="20" placeholder='Nom' className='inputsearch'onChange={(e)=>{
+              <input type="text" name="T2"  size="20" placeholder='Nom' className='inputsearch' ref={inputRef} onChange={(e)=>{
                 setNom(e.target.value)
-              }}/>
+              }} autofocus />
               </div>
               <div className='infos'>
      <label className="labels">Prénom:</label>

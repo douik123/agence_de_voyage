@@ -133,3 +133,56 @@ height: 50px;
 width: 50px;
 background-color: rgb(19, 125, 19);
 }
+.cardimage
+{
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+}
+.card
+{
+/* display: grid;
+width: 80em;
+grid-gap: 1em; */
+border-style: inset;
+width: 300px;
+
+color: rgb(0, 0, 0);
+/* align-items: start ; */
+}
+.cardflex
+{
+  display: flex;
+}
+.destination
+{
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0px 0px 0px;
+}
+.namepays
+{
+  margin: 0px 0px 0px 10px;
+  font-family: Arial, sans-serif;
+  padding: 5px 0px 10px 0px;
+  text-decoration: underline;
+}
+.titre
+{
+  text-align: center;
+  margin: 20px;
+}
+.imagepayss
+{
+  width: 35%;
+  height: 35%;
+  object-fit: contain;
+  margin: auto;
+  padding: 20px;
+
+}
+.descriptionpays
+{
+  font-size: 20px;
+  margin: 20px;
+}
